@@ -13,14 +13,21 @@ public class BSTHashTableMain<E> {
 		BST<Integer> bst = new BST<Integer>();
 		Node<Integer> root = null;
 		root = bst.insert(root, 56);
-		printInOrderBST(root);
-		System.out.println();
 		bst.insert(root, 30);
-		printInOrderBST(root);
-		System.out.println();
 		bst.insert(root, 70);
+		bst.insert(root, 22);
+		bst.insert(root, 40);
+		bst.insert(root, 60);
+		bst.insert(root, 95);
+		bst.insert(root, 11);
+		bst.insert(root, 65);
+		bst.insert(root, 3);
+		bst.insert(root, 16);
+		bst.insert(root, 63);
+		bst.insert(root, 67);
+
+		System.out.println("Elements in BST in inOrder fashion: ");
 		printInOrderBST(root);
-		System.out.println();
 	}
 
 	// prints the elements in BST in in-order format
