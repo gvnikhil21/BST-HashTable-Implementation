@@ -5,7 +5,24 @@ import com.bridgelabs.bsthashtable.model.*;
 public class BSTHashTableMain<E> {
 
 	public static void main(String[] args) {
-		performBSTOperation();
+		// performBSTOperation();
+		performHashTableOperation();
+	}
+
+	// performs hashTable operations
+	private static void performHashTableOperation() {
+		MyHashTable<String, Integer> myTable = new MyHashTable<String, Integer>();
+		String message = "To be or not to be";
+		String msgArray[] = message.toLowerCase().trim().split(" ");
+		for (String str : msgArray) {
+			Integer value = myTable.get(str);
+			if (value == null)
+				value = 1;
+			else
+				value += 1;
+			myTable.put(str, value);
+		}
+		System.out.println(myTable);
 	}
 
 	// performs BST operations
