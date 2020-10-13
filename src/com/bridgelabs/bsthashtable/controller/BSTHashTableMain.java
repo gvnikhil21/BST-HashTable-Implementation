@@ -28,6 +28,14 @@ public class BSTHashTableMain<E> {
 
 		System.out.println("Elements in BST in inOrder fashion: ");
 		printInOrderBST(root);
+		System.out.println();
+		System.out.println("No. of elements in BST: " + bst.size(root));
+
+		boolean searchResult = bst.search(root, 95);
+		if (searchResult)
+			System.out.println("Element present in BST!");
+		else
+			System.out.println("Element not present!");
 	}
 
 	// prints the elements in BST in in-order format
