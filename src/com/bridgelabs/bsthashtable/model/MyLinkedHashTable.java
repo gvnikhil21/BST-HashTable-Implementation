@@ -64,8 +64,7 @@ public class MyLinkedHashTable<K, V> {
 			if (myMapNode == null) {
 				return null;
 			} else {
-				myLinkedList.remove(myMapNode);
-				return myMapNode;
+				return (MyMapNode<K, V>) myLinkedList.remove(myMapNode);
 			}
 		}
 	}
