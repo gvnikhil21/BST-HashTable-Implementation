@@ -46,7 +46,7 @@ public class MyMapNode<K, V> implements INode<K, V> {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Key: " + key + " , " + "Value: " + value + "\n");
+		sb.append("{Key: " + key + " , " + "Value: " + value + "} ");
 		if (next != null)
 			sb.append(next);
 		return sb.toString();

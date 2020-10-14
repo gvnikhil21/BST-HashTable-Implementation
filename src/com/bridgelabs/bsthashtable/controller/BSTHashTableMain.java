@@ -5,14 +5,14 @@ import com.bridgelabs.bsthashtable.model.*;
 public class BSTHashTableMain<E> {
 
 	public static void main(String[] args) {
-		// performBSTOperation();
+		performBSTOperation();
 		performHashTableOperation();
 	}
 
 	// performs hashTable operations
 	private static void performHashTableOperation() {
-		MyHashTable<String, Integer> myTable = new MyHashTable<String, Integer>();
-		String message = "To be or not to be";
+		MyLinkedHashTable<String, Integer> myTable = new MyLinkedHashTable<String, Integer>();
+		String message = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 		String msgArray[] = message.toLowerCase().trim().split(" ");
 		for (String str : msgArray) {
 			Integer value = myTable.get(str);
@@ -22,6 +22,7 @@ public class BSTHashTableMain<E> {
 				value += 1;
 			myTable.put(str, value);
 		}
+		System.out.println("----Hash-Table----");
 		System.out.println(myTable);
 	}
 
